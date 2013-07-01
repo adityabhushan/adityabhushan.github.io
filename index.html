@@ -1,65 +1,87 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: default
+---
+<div class="row-fluid">
+	<div class="span6">
+	<div class="headlines">
+	<h2>Elevator pitch</h2>
+	</div>
+	<br/>
+	<p>I believe in <a href="/blog/push.html">pushing</a> myself</p>
+	<p>Keep learning whatever interests me</p>
+	<p>Am <a href="/blog/thanks.html">grateful</a> for what i have and give back</p>
+	<p>Believe in free flow of information</p>
+	<p>Work for my <a href="/blog/bucket.html">dreams</a> instead of what others want me to</p>
+	<p>Prefer being a <a href="/blog/generalist.html">generalist</a> over a specialist</p>
+	</div>
+	<div class="span6">
+	<div class="headlines">
+	<h2> Recent Articles</h2><br />
+	</div>
+	
+	{% for post in paginator.posts %}
+	<div class="row-fluid">
+	<div class="span12">
+	<a href="{{ post.url }}"><font color=#fff>{{ post.title }}</font></a><br/>
+	<br/>
+	</div>
+</div>	
+{% endfor %}
+<a href="/blog.html">Read more</a>
+	
+	</div>
+	</div>
+<br/>
+<br/>
+<br/>	
+<div class="row-fluid">
+	<div class="span6">
+	<div class="headlines">
+	<h2>Professional Experience</h2>
+	</div><br/>
+	<p>Worked as Data entry operator (Age 15)</font></p>
+	<p>Repaired computers (Age 16)</p>
+	<p>Junior artist in Milana - a south indian movie (Age 17)</p>
+	<p>Sold olive oil (Age 17)</p>
+	<p>Reverse Engineered Softwares (Age 18)</p>
+	<p>Conducted workshops for over 10,000 students in 30 different schools (Age 21)</p>
+	<p>Helped an eCommerce Firm move its backend operations to Salesforce (Age 22)</p>
+	<p>Presently helping entrepreneurs by providing them visibility and platform to showcase (Till date)</p>
+	
+	</div>
+</div>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<br/>
+<br/>
+<br/>
+<div class="headlines">
+	<h2>Projects</h2>
+</div>
+<br/>
+<div class="row-fluid">
+	<div class="span4">
+	<center><a href="http://github.com/adityabhushan"><img src = "/img/code.png" alt="Coding" width="96px" height="96px"/><br/><br/><h4>Code</h4></a></center>
+	</div>
+	<div class="span4">
+	<center><a href="/lifehacks.html"><img src = "/img/life.png" alt="Life Hack" width="96px" height="96px"/><br/><br/><h4>Life Hacks</h4></a></center>
+	</div>
+	<div class="span4">
+	<center><a href="/books.html"><img src = "/img/books.png" alt="Book Notes" width="96px" height="96px"/><br/><br/><h4>Book Notes</h4></a></center>
+	</div>
+</div>
 
-    <title>Adityabhushan.github.io by adityabhushan</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Adityabhushan.github.io</h1>
-        <h2></h2>
-
-        <section id="downloads">
-          <a href="https://github.com/adityabhushan" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+<br/>
+<br/>
+<br/>
+<div class="headlines">
+	<h2> Connect with me</h2>
+	</div>
+	<br/>
+	
+	<p>Add as Friend on <a href="http://www.facebook.com/adityabhushan">facebook</a></p>
+	<p>Follow on <a href="http://twitter.com/TrollNath">Twitter</a></p>
+	<p>View my <a href="http://in.linkedin.com/in/adityabhushandwivedi">linkedin</a> profile</p>
+	<p>I am a <a href="http://www.quora.com/Aditya-Bhushan-Dwivedi-1">quora</a> addict </p>
+	<p>Apart from these, I have a <a href="http://about.me/adityabhushan">about.me profile</a> too</p>
+	<p>And yes, I respond to all so drop me a line at either of above !!</p>
+	</div>
