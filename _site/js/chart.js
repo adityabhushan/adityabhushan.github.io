@@ -1,48 +1,6 @@
-// Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
-        ]);
-        
-        var data1 = google.visualization.arrayToDataTable([
-          ['ID', 'X', 'Y', 'Temperature'],
-          ['',   80,  167,      120],
-          ['',   79,  136,      130],
-          ['',   78,  184,      50],
-          ['',   72,  278,      230],
-          ['',   81,  200,      210],
-          ['',   72,  170,      100],
-          ['',   68,  477,      80]
-        ]);
-        
-        var data2 = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
-		
-		
-      google.load('visualization', '1.0', {packages:['corechart','gauge']});
-      google.setOnLoadCallback(drawTimelineChart);
+	google.load('visualization', '1.0', {packages:['corechart','gauge']});
+	//google.load({'modules':[{'name':'visualization','version':'1.1','packages':['timeline']}]});
+      //google.setOnLoadCallback(drawTimelineChart);
 	  google.setOnLoadCallback(drawBubbleChart);
 	  
        function drawTimelineChart() {
@@ -115,41 +73,3 @@
         chart2.draw(data2, options2);
            		
       }		
-		
-
-
-
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
-		
-		var options1 = {
-          colorAxis: {colors: ['yellow', 'red']}
-        };
-        
-        var options2 = {
-          title: 'Company Performance',
-          hAxis: {title: 'Year',  titleTextStyle: {color: 'red'}}
-        };
-
-
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('pie_div'));
-        chart.draw(data, options);
-        
-        var chart1 = new google.visualization.ColumnChart(document.getElementById('bar_div'));
-        chart1.draw(data, options);
-        
-        var chart2 = new google.visualization.AreaChart(document.getElementById('area_div'));
-        chart2.draw(data2, options2);
-
-        
-        var chart3 = new google.visualization.BubbleChart(document.getElementById('bubble_div'));
-        chart3.draw(data1, options1);
-        
-        
-
-      }
-      
