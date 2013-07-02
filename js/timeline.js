@@ -15,7 +15,7 @@
 		dataTable.addColumn({ type: 'date', id: 'End' });
 
 		dataTable.addRows([
-			<!--[ 'Engineering', new Date(2007, 9, 0), new Date(2011, 6, 0) ],
+			//[ 'Engineering', new Date(2007, 9, 0), new Date(2011, 6, 0) ],
 			[ 'The Times of India', new Date(2011, 6, 0), new Date(2011, 11, 0) ],
 			[ 'Computer Sciences Corporation',      new Date(2011, 8, 0),  new Date(2012, 5, 0) ],
 			[ 'YourStory.in',  new Date(2012, 5, 17),  new Date() ]]);
