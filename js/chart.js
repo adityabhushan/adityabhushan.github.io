@@ -82,10 +82,10 @@
         ]);
 
         var options3 = {
-		'width':600,
+		  'width':600,
           'height':400,
-          title: 'Social Media',
-          vAxis: {title: 'Social Media Channels',  titleTextStyle: {color: 'green'}},
+          vAxis: {title: 'Social Media Channels'},
+		  hAxis: {title: 'Level of Expertise'},
 		  colors: ['red','green', 'blue', 'yellow'],
 		  is3d: true,
 		  legend: 'none'
