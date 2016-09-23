@@ -1,9 +1,0 @@
-name: "Aditya Bhushan Dwivedi"
-description: ""
-
-url: "http://localhost:4000"
-
-paginate: 5
-
-markdown: rdiscount
-permalink: /blog/:title.html
