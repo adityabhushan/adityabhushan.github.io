@@ -1,0 +1,18 @@
+---
+layout: ap
+date: 2009-01-16 15:06
+---
+<div class="headlines">
+	<h2> All Posts</h2><br /><br/>
+</div>
+
+	{% for post in site.posts %}
+	<div class="row-fluid">
+	<div class="span12">
+	<font color=#000><i><a href="{{ post.url }}">{{ post.title }}</a></i></font>
+	<p style="font-size:16px">{{ post.date | date_to_long_string }}</p>
+	<br/>
+	
+	</div>
+	</div>	
+	{% endfor %}
